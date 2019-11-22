@@ -1,0 +1,7 @@
+echo off
+echo Turning on Windows Update Services...
+net stop BITS
+net stop wuauserv 
+sc config BITS start= disabled
+sc config wuauserv start= disabled
+pause
